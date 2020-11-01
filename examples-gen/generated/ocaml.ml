@@ -4,7 +4,6 @@
    ~/tmp/core_kernel__Date.cmi \
    examples/generated/date_bindings.ml
 *)
-open Python_lib
 
 let () =
   Py.initialize ();

@@ -4,10 +4,12 @@
 
 (rule (targets date_bindings.ml gen_types.ml)
  (deps (:first_dep ../python_gen.exe)
-  %{workspace_root}/lib/core_kernel/src/core_kernel__Date.cmi)
+  /home/jonathan/.opam/default/lib/core_kernel/core_kernel__Date.cmi)
  (action
   (bash
-   "%{first_dep} ../../../../../lib/core_kernel/src/core_kernel__Date.cmi ./date_bindings.ml"))
+   "%{first_dep} \
+     /home/jonathan/.opam/default/lib/core_kernel/core_kernel__Date.cmi \
+     date_bindings.ml"))
  (mode fallback))
 
 (alias (name feature-subtree-build)
